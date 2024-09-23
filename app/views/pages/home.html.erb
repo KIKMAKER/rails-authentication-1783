@@ -3,5 +3,10 @@
 
 <% if user_signed_in? %>
   <%= current_user.email %>
-
+  <% if current_user.first_name %>
+    <%= "Hi, I am #{current_user.first_name}" %>
+  <% else %>
+  <div class="card">
+    <%= "LE WAGWAN, I AM #{current_user.email}" %>
+  </div>
 <% end %>
